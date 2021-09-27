@@ -24,8 +24,13 @@ public class App
         ejercicio3();
 
         ejercicio4();
+
+        ejercicio5();
+
+        ejercicio6();
     }
 
+    //Declarar dos variables numericas con valores 10 y 5 y mostrar por consola la suma, resta, multiplicacion, division y módulo(resto de la division)
     private static void ejercicio1(){
 
         int num1=10;
@@ -39,6 +44,8 @@ public class App
 
     }
 
+
+    //Mostrar los numeros del 1 al 100 (ambos incluidos) separados por comas
     private static void ejercicio2(){
 
         int num;
@@ -49,6 +56,9 @@ public class App
         }
     }
 
+
+
+    //Mostrar el dia actual en texto(lunes,martes...) Usar calendar y switch.
     private static void ejercicio3(){
 
             Calendar cal= Calendar.getInstance();
@@ -56,45 +66,66 @@ public class App
             int diaSemana =cal.get(Calendar.DAY_OF_WEEK);
 
             switch(diaSemana){
-                case 1: System.out.println("Hoy es domingo");
-                case 2: System.out.println("Hoy es lunes");
-                case 3: System.out.println("Hoy es martes");
-                case 4: System.out.println("Hoy es miercoles");
-                case 5: System.out.println("Hoy es jueves");
-                case 6: System.out.println("Hoy es viernes");
-                case 7: System.out.println("Hoy es sabado");
+                case 1: System.out.println("Hoy es domingo"); break;
+                case 2: System.out.println("Hoy es lunes"); break;
+                case 3: System.out.println("Hoy es martes");break;
+                case 4: System.out.println("Hoy es miercoles");break;
+                case 5: System.out.println("Hoy es jueves");break;
+                case 6: System.out.println("Hoy es viernes");break;
+                case 7: System.out.println("Hoy es sabado");break;
+                default: System.out.println("ERROR");break;
 
             }
     }
 
+
+
+    //Crear dos ArrayList<String> e imprimir los valores que existan en una de ellas y no en la otra
     private static void ejercicio4(){
 
        ArrayList<String> listaA = new ArrayList<String>();
        ArrayList<String> listaB = new ArrayList<String>();
 
-        listaA.add("blanco");
-        listaA.add("verde");
-        listaA.add("amarillo");
+        listaA.add("Blanco");
+        listaA.add("Verde");
+        listaA.add("Amarillo");
 
-        listaB.add("morado");
-        listaB.add("verde");
-        listaB.add("amarillo");
+        listaB.add("Morado");
+        listaB.add("Verde");
+        listaB.add("Amarillo");
 
 
         for (String element : listaB) {
             if (!listaA.contains(element)) {
-                System.out.println(element + "no existe en lista A");
+                System.out.println(element + " no existe en lista A");
             }
         }
 
         for (String element : listaA){
             if (!listaB.contains(element)) {
-                System.out.println(element + "no existe en lista B");
+                System.out.println(element + " no existe en lista B");
             }
         }
     }
 
 
+    //Crear una clase vehiculo con un atributo "velocidad" y heredarla para la clase "coche" con atributo numeroRuedas. Instanciar un coche con velocidad 40 y 4 ruedas
+    private static void ejercicio5(){
+
+    Coche objetoCoche = new Coche( 40,  4);
+
+    System.out.println("Mi coche va a " + objetoCoche.getVelocidad()
+                        + " km/h y tiene " + objetoCoche.getNumeroRuedas() + "ruedas");
+
+    }
+
+
+    //Crear una interface "volador" con metodo "volar", implementarla en una clase "gaviota" donde el metodo volar imprima en consola "vuelo y tengo pico". Instanciar la interface a partir de gaviota y llamar a volar.
+
+    private static void ejercicio6(){
+        Volador objetoVolador = new Gaviota();
+        objetoVolador.volar();
+    }
 
 }
 
