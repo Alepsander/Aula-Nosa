@@ -1,28 +1,33 @@
 package org.example;
 
-import com.google.j2objc.annotations.ObjectiveCName;
+
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
-import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
-import java.awt.*;
+import java.time.LocalDateTime;
+
 
 public class EchoBot extends TelegramLongPollingBot {
+
+    String ultimoMensaje;
 
     @Override
     public void onUpdateReceived(final Update update) {
 
-        final String messageTextReceived = update.getMessage().getText();
+        final Message messageReceived = update.getMessage();
+
 
         final long chatId = update.getMessage().getChatId();
 
-        SendMessage message = procesarMensaje(String.valueOf(chatId), messageTextReceived);
+        SendMessage message = procesarMensaje(String.valueOf(chatId), messageReceived);
+
 
         try{
-            execute(message);
+                execute(message);
+
         }catch(TelegramApiException e){
             e.printStackTrace();
         }
@@ -35,30 +40,39 @@ public class EchoBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
-        return "12321321321:asfsasfasdf";
+        return "2048204729:AAGdShCs2uDqsTsOCLTrp8sYi3t_QjwhqbE";
     }
 
 
-    private SendMessage procesarMensaje(String chatId, String texto) {
+    private SendMessage procesarMensaje(String chatId, Message mensaje) {
 
         SendMessage message = new SendMessage();
-        message.setText("Me has dicho: " + texto);
+
+            switch (mensaje.getText()){
+                case "/start" : message.setText("Bienvenido. Pulse /ayuda para ver el resto de comandos");
+                    break;
+                case "/ayuda" : message.setText("/start\n" + "/ayuda\n" + "/hora\n" + "/miNombre\n" + "ultimoMensaje");
+                    break;
+                case "/hora" :
+                    LocalDateTime hora = LocalDateTime.now();
+                    message.setText("La fecha actual es " + hora);
+                    break;
+                case "/miNombre": message.setText(mensaje.getFrom().getFirstName());
+                    break;
+                case "/ultimoMensaje: ": message.setText(ultimoMensaje);
+                break;
+
+                default: message.setText(mensaje.getText());
+
+
+            }
         message.setChatId(String.valueOf(chatId));
 
+        ultimoMensaje=message.getText();
         return message;
-    }
 
 
-    public static void main(String[] args){
-        registrarBot();
+
     }
 
-    private static void registrarBot(){
-        try{
-            TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
-            botsApi.registerBot(new EchoBot());
-        }catch (TelegramApiException e) {
-            e.printStackTrace();
-        }
-    }
 }
