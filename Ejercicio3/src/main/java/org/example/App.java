@@ -25,7 +25,7 @@ public class App
         int almacen = in.read();
         String decimales = "";
         String hexadecimales = "";
-
+        String salChar = new String("");
 
         while (almacen != -1) {
             decimales = decimales + almacen + "-";
@@ -34,9 +34,11 @@ public class App
             String hexadecimal = Integer.toHexString(almacen);
             hexadecimales = hexadecimales + hexadecimal + "-";
             almacen = in.read();
+
         }
 
         System.out.println(decimales);
         System.out.println(hexadecimales);
+        System.out.println(salChar);
     }
 }
