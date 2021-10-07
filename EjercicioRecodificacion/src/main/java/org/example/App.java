@@ -1,6 +1,7 @@
 package org.example;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 /**
  * Hello world!
@@ -17,23 +18,31 @@ public class App {
 
         try {
             fis = new FileInputStream("C:\\Users\\FP\\Desktop\\FicheroCodificacion.txt");
-            isr = new InputStreamReader(fis);
+            isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
 
-            fos = new FileOutputStream("C:\\Users\\FP\\Desktop\\FicheroCodificacion.txt");
-            osw = new OutputStreamWriter(fos);
+            fos = new FileOutputStream("C:\\Users\\FP\\Desktop\\FicheroCodificacion2.txt");
+            osw = new OutputStreamWriter(fos, StandardCharsets.ISO_8859_1);
 
-            int car = fis.read();
+            int data = isr.read();
 
-            while (car != -1) {
-                fos.write(car);
-                car = fis.read();
+
+            while (data != -1) {
+                char caracter = (char) data;
+                System.out.print(caracter);
+                osw.write(caracter);
+                data = isr.read();
             }
 
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
 
+
+        isr.close();
+        osw.close();
+        fis.close();
+        fos.close();
+        
+    } catch (FileNotFoundException e) {
+        e.printStackTrace();
     }
     }
-}
+    }
