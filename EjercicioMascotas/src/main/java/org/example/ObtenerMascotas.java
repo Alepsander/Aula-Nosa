@@ -80,7 +80,7 @@ public class ObtenerMascotas {
                 eRaiz.appendChild(mascota);
 
                 Attr attr = doc.createAttribute("Nombre");
-                attr.setNodeValue("Leo");
+                attr.setNodeValue(obj.getNombre());
                 mascota.setAttributeNode(attr);
 
                 if (obj.getTipo() != null) {
@@ -112,4 +112,7 @@ public class ObtenerMascotas {
             e.printStackTrace();
         }
     }
+
+
+    
 }

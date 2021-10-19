@@ -14,6 +14,10 @@ public class Mascota {
         this.genero = genero;
     }
 
+    public Mascota() {
+
+    }
+
     public String getNombre() {
         return nombre;
     }
