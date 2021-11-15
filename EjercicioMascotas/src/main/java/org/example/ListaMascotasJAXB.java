@@ -4,7 +4,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 
-@XmlRootElement(name="mascotas")
+@XmlRootElement(name="mascotasth")
 public class ListaMascotasJAXB {
         private ArrayList<MascotasJAXB> listaMascotas;
 

@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlElement;
 import java.util.ArrayList;
 
 public class Escena {
-    private String codigo;
+    private int codigo;
     private String texto;
 
 
@@ -14,24 +14,26 @@ public class Escena {
     public Escena() {
     }
 
-    public Escena(String codigo, String texto, ArrayList<Opcion> opciones) {
+    public Escena(int codigo, String texto, ArrayList<Opcion> opciones) {
         this.codigo = codigo;
         this.texto = texto;
         this.opciones = opciones;
     }
 
-    public String getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
+
     @XmlAttribute
-    public void setCodigo(String codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
     public String getTexto() {
         return texto;
     }
-    @XmlElement(name="texto")
+
+    @XmlElement(name = "texto")
     public void setTexto(String texto) {
         this.texto = texto;
     }
@@ -39,7 +41,8 @@ public class Escena {
     public ArrayList<Opcion> getOpciones() {
         return opciones;
     }
-    @XmlElement(name="opcion")
+
+    @XmlElement(name = "opcion")
     public void setOpciones(ArrayList<Opcion> opciones) {
         this.opciones = opciones;
     }
@@ -47,7 +50,7 @@ public class Escena {
     @Override
     public String toString() {
         return "Escena{" +
-                "codigo='" + codigo + '\'' +
+                "codigo=" + codigo +
                 ", texto='" + texto + '\'' +
                 ", opciones=" + opciones +
                 '}';
