@@ -15,12 +15,12 @@ public class App
 
         //marcaDaoSQLServer.listar();
 
-        //marcaDaoSQLServer.consultar(1);
+        marcaDaoSQLServer.consultar(1);
 
-        //marcaDaoSQLServer.eliminar(1);
+        marcaDaoSQLServer.eliminar(1);
 
-        marcaDaoSQLServer.insertar(new Marca(8,"Alex"));
+       // marcaDaoSQLServer.insertar(new Marca(8,"Alex"));
 
-        marcaDaoSQLServer.actualizar(new Marca(8, "Dani"));
+        //marcaDaoSQLServer.actualizar(new Marca(8, "Dani"));
     }
 }

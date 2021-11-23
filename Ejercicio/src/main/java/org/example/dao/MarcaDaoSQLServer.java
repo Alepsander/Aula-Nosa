@@ -61,6 +61,9 @@ public class MarcaDaoSQLServer implements MarcaDao {
             id = rs.getInt(1);
             System.out.println("Id generado:" + id);
 
+            Marca objMarca = MarcaDao.consultar(id:1);
+            System.out.println(objMarca.toString());
+
             c.commit();
             ps.close();
 
