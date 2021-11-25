@@ -86,4 +86,52 @@ public class HeroeDAOSQLServer implements HeroeDAO {
         }
     }
 
-}
+
+    public static void Consultar(Heroe heroe) {
+        Connection c = null;
+        ConexionSQLServer conexionSQLServer = new ConexionSQLServer();
+
+        try {
+            c = obtenerConexion();
+            String consulta = "SELECT NOMBRE FROM HEROES WHERE ID = 1";
+            Statement s= c.createStatement();
+            ResultSet rs = s.executeQuery(consulta);
+            while(rs.next()){
+                System.out.println("Nombre: " + rs.getString("Nombre"));
+            }
+        } catch (SQLException e) {
+            System.out.println("Error en la ejecucion de la consola");
+            e.printStackTrace();
+        } finally {
+            try {
+                if (c != null && !c.isClosed())
+                    c.close();
+            } catch (SQLException e) {
+                System.out.println("Error al cerrar la conexion");
+            }
+        }
+    }
+
+    public static void Listar(){
+        ConexionSQLServer conexionSQLServer = new ConexionSQLServer();
+        Statement sentencia = null;
+        ResultSet resultado = null;
+
+        try{
+            sentencia = obtenerConexion().createStatement();
+            resultado = sentencia.executeQuery("SELECT * FROM Heroes");
+
+            while(resultado.next()){
+                Heroe objeto = new Heroe();
+                objeto.setId(resultado.getInt("Id"));
+                objeto.setNombre(resultado.getString("Nombre"));
+                objeto.setClase(resultado.getString("Clase"));
+                objeto.setRaza(String.valueOf((resultado.getInt("Raza"))));
+                System.out.println(objeto.toString());
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    }

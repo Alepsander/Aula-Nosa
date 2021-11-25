@@ -35,7 +35,7 @@ public class App {
         //obtencionId();
         //actualizarNombreMarca(objMarca);
         //borrarMarca(objMarca);
-        //seleccionarRegistroUnico(objMarca);
+        seleccionarRegistroUnico(objMarca);
         //seleccionarVista(objMarca);
         //insertarMarcasLotes();
 
