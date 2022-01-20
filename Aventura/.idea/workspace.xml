@@ -4,7 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04b69c75-a2a4-4f3e-8ffc-3307265b206d" name="Changes" comment="" />
+    <list default="true" id="04b69c75-a2a4-4f3e-8ffc-3307265b206d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ExamenJDBC/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenJDBC/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenJDBC/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenJDBC/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenJDBC/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenJDBC/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenJDBC/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenJDBC2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenJDBC2/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenJDBC2/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenJDBC2/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenJDBC2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenJDBC2/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenJDBC2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenJDBC2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenJDBC2/src/main/java/org/example/connection/ConexionSQLServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenJDBC2/src/main/java/org/example/dao/RioDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenJDBC2/src/main/java/org/example/dao/RioDAOSQLServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenJDBC2/src/main/java/org/example/model/Rio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MerchantGame/src/main/java/org/example/PlayerHeroesModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BBDDJuegoRol/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BBDDJuegoRol/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BBDDJuegoRol/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BBDDJuegoRol/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BBDDJuegoRol/src/main/java/org/example/dao/HeroeDAOSQLServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BBDDJuegoRol/src/main/java/org/example/dao/HeroeDAOSQLServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BBDDJuegoRol/target/classes/org/example/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BBDDJuegoRol/target/classes/org/example/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BBDDJuegoRol/target/classes/org/example/dao/HeroeDAOSQLServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BBDDJuegoRol/target/classes/org/example/dao/HeroeDAOSQLServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JDBC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBC/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JDBC/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBC/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PSP/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PSP/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PSP/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PSP/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PSP/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PSP/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PSP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PSP/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PSP/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PSP/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PSP/target/classes/org/example/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PSP/target/classes/org/example/App.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +71,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../EjercicioMascotas" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RunManager">

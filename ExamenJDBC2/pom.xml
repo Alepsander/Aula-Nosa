@@ -5,14 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
-  <artifactId>PSP</artifactId>
-  <packaging>pom</packaging>
+  <artifactId>ExamenJDBC2</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <modules>
-    <module>PSPHilos</module>
-  </modules>
 
-  <name>PSP</name>
+  <name>ExamenJDBC2</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -29,6 +25,14 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>com.microsoft.sqlserver</groupId>
+      <artifactId>mssql-jdbc</artifactId>
+      <version>9.4.0.jre8</version>
+    </dependency>
+
+
   </dependencies>
 
   <build>

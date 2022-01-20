@@ -1,10 +1,10 @@
 package org.example;
 
-import com.sun.xml.internal.bind.v2.TODO;
 import org.example.dao.HeroeDAOSQLServer;
 import org.example.model.Heroe;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 /**
  * Hello world!
@@ -15,6 +15,14 @@ public class App {
 
         HeroeDAOSQLServer heroeDaoSQLServer = new HeroeDAOSQLServer();
         Heroe objHeroe = new Heroe(14, "Link", "Caballero", "1");
+
+
+        ArrayList<Heroe> listaHeroes = new ArrayList<>();
+        listaHeroes.add(new Heroe(15, "Scathach", "Caballero", "1"));
+        listaHeroes.add(new Heroe(16, "Jack", "Picaro", "9"));
+        listaHeroes.add(new Heroe(17, "Shivana", "Mago", "8"));
+
+
 
         /*
         heroeDaoSQLServer.insertar(new Heroe(12, "Merlin", "Mago", "1"));
@@ -41,7 +49,19 @@ public class App {
         System.out.println("Lista realizada con exito");
         */
 
-        //todo Vista, procedimiento almacenado y batch
+
+        HeroeDAOSQLServer.VistaHeroesOrdenAlfabetico();
+        System.out.println("Vista realizada con exito");
+
+
+        /*
+        heroeDaoSQLServer.insertarHeroesLotes(listaHeroes);
+        System.out.println("Insercion realizada con exito");
+        */
+
+/*
+        heroeDaoSQLServer.listarHeroesPorRazas();
+*/
 
 
     }

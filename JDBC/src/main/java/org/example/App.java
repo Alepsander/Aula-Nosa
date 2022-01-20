@@ -439,11 +439,8 @@ public class App {
                     }else {
                         ResultSet rs = st.getResultSet();
                         while(rs.next()){
-                            String texto = rs.getString("nombre") + "-"
-                                    + resultado.getString("apellido") + "-"
-                                    + resultado.getInt("id") + "-"
-                                    + resultado.getString("ciudad") + "-"
-                                    + resultado.getDate("fecha");
+                            String texto = rs.getString("Nombre") + "-"
+                                    + resultado.getString("Raza");
 
                         }
                     }
