@@ -1,9 +1,10 @@
 package org.example.model;
 
+import java.io.Serializable;
 import java.sql.Time;
 import java.sql.Timestamp;
 
-public class Actuacion {
+public class Actuacion implements Serializable {
 
     private int Id;
     private int IdFestival;
@@ -13,6 +14,7 @@ public class Actuacion {
     private String Escenario;
     private Timestamp Inicio;
     private Timestamp Fin;
+    private Festival festival;
 
 
     public Actuacion() {
@@ -104,6 +106,7 @@ public class Actuacion {
                 ", Escenario='" + Escenario + '\'' +
                 ", Inicio=" + Inicio +
                 ", Fin=" + Fin +
+                //", tarea=" + tarea +
                 '}';
     }
 }

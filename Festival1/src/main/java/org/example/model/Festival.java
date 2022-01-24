@@ -1,10 +1,12 @@
 package org.example.model;
 
+import java.io.Serializable;
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Set;
 
-public class Festival {
+public class Festival implements Serializable {
 
     private int Id;
     private String Nombre;
@@ -14,6 +16,7 @@ public class Festival {
     private int Aforo;
     private double Precio;
     private int Ventas;
+    private Set<Actuacion> actuaciones;
 
     public Festival() {
     }
@@ -82,6 +85,8 @@ public class Festival {
         Ventas = ventas;
     }
 
+
+
     public Festival(int id, String nombre, String descripcion, Timestamp inicio, Timestamp fin, int aforo, double precio, int ventas) {
         Id = id;
         Nombre = nombre;
@@ -93,7 +98,18 @@ public class Festival {
         Ventas = ventas;
     }
 
-
+    //Constructor con set
+    public Festival(int id, String nombre, String descripcion, Timestamp inicio, Timestamp fin, int aforo, double precio, int ventas, Set<Actuacion> actuaciones) {
+        Id = id;
+        Nombre = nombre;
+        Descripcion = descripcion;
+        Inicio = inicio;
+        Fin = fin;
+        Aforo = aforo;
+        Precio = precio;
+        Ventas = ventas;
+        this.actuaciones = actuaciones;
+    }
 
     @Override
     public String toString() {
