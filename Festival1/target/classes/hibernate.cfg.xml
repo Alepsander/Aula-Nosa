@@ -14,11 +14,11 @@
         <property name="hibernate.default_schema">dbo</property>
 
         <property name="hibernate.show_sql">true</property>
-        <property name="hibernate.hbm2ddl.auto">validates</property>
+        <property name="hibernate.hbm2ddl.auto">validate</property>
         <property name="hibernate.current_session_context_class">thread</property>
 
-        <mapping resource="org/example/model/Festival.hbm.xml"/>
-        <mapping resource="org/example/model/Actuacion.hbm.xml"/>
+        <mapping resource="org.example.model/Festival.hbm.xml"/>
+        <mapping resource="org.example.model/Actuacion.hbm.xml"/>
 
     </session-factory>
 </hibernate-configuration>

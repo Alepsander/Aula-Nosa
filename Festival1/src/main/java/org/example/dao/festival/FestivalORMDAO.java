@@ -20,6 +20,7 @@ public class FestivalORMDAO implements FestivalDAO{
         return lista;
     }
 
+
     @Override
     public Festival consultar(int id){
         Session conexion = ConexionORM.obtenerConexion().getCurrentSession();
@@ -28,6 +29,7 @@ public class FestivalORMDAO implements FestivalDAO{
         tx.commit();
         return obj;
     }
+
 
     @Override
     public void actualizar(Festival objeto){
@@ -54,6 +56,7 @@ public class FestivalORMDAO implements FestivalDAO{
         return objeto.getId();
     }
 
+    
     @Override
     public void eliminar(int id){
         Session conexion = ConexionORM.obtenerConexion().getCurrentSession();

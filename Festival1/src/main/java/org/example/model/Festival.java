@@ -1,5 +1,7 @@
 package org.example.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.sql.Time;
 import java.sql.Timestamp;
@@ -9,6 +11,15 @@ import java.util.Set;
 public class Festival implements Serializable {
 
     private int Id;
+
+    public Set<Actuacion> getActuaciones() {
+        return actuaciones;
+    }
+
+    public void setActuaciones(Set<Actuacion> actuaciones) {
+        this.actuaciones = actuaciones;
+    }
+
     private String Nombre;
     private String Descripcion;
     private Timestamp Inicio;

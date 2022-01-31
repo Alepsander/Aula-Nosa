@@ -1,9 +1,12 @@
 package org.example.model;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Time;
 import java.sql.Timestamp;
 
+@Entity
+@Table(name = "Actuacion")
 public class Actuacion implements Serializable {
 
     private int Id;
@@ -82,6 +85,14 @@ public class Actuacion implements Serializable {
 
     public void setFin(Timestamp fin) {
         Fin = fin;
+    }
+
+    public Festival getFestival() {
+        return festival;
+    }
+
+    public void setFestival(Festival festival) {
+        this.festival = festival;
     }
 
     public Actuacion(int id, int idFestival, String nombre, String descripcion, String grupo, String escenario, Timestamp inicio, Timestamp fin) {
